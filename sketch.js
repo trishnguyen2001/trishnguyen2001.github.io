@@ -1,5 +1,24 @@
+let c;
+let pic;
+
+function preload() {
+  pic = loadImage("assets/mikopfp.jpg");
+}
+
 function setup() {
-  createCanvas(400, 400);
+  // let wwidth;
+  // let wheight;
+  // if (windowWidth > 1000) {
+  //   wwidth = windowWidth * 0.55;
+  //   wheight = windowHeight * 0.35;
+  // } else {
+  //   wwidth = windowWidth * 0.35;
+  //   wheight = windowHeight * 0.35;
+  // }
+  // c = createCanvas(wwidth, wheight);
+  // c.parent("canvasHolder");
+  // // c.parent("intro");
+  // background(255, 255, 255, 40);
 }
 
 ///////////////////////////////COLORS/////////////////////////////////
@@ -12,12 +31,11 @@ function setup() {
 //  smoke               #bbc9ca     187,201,202
 //  palladian blue      #c2d3c9     194,211,201
 //////////////////////////////////////////////////////////////////////
+
 function draw() {
-  background(220);
-  stroke(0, 0, 0);
-  strokeWeight(10);
-  ellipse(width * 0.5, height * 0.5, width * 0.75, width * 0.75);
-  ellipse(width * 0.3, height * 0.4, width * 0.1, width * 0.1);
-  ellipse(width * 0.7, height * 0.4, width * 0.1, width * 0.1);
-  line(width * 0.4, height * 0.55, width * 0.6, height * 0.55);
+  c = createCanvas(windowWidth, windowHeight * 0.4);
+  c.parent("canvasHolder");
+  background(255, 255, 255, 30);
+  imageMode(CENTER);
+  image(pic, width * 0.2, height * 0.6, 500, 500);
 }
